@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:elevation="4dp"
+	/>
+
+      <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Name" />
+        <TextView
+        android:id="@+id/user_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Username" /> 
+        <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Email" />
+    <TextView
+        android:id="@+id/user_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Phone" />
+    <TextView
+        android:id="@+id/user_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Website" />
+    <TextView
+        android:id="@+id/user_street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Street" />
+    <TextView
+        android:id="@+id/user_suite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Suite" />
+    <TextView
+        android:id="@+id/user_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text City" />   
+    <TextView
+        android:id="@+id/user_zipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:padding="2dp"
+        local:MvxBind="Text Zipcode" />
+</LinearLayout>
