@@ -1,11 +1,12 @@
 ﻿using Core.Model;
-
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Text.Json;
+
 using System.Threading.Tasks;
 
 namespace Core.Service
@@ -20,10 +21,10 @@ namespace Core.Service
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var streamTask = client.GetStreamAsync(URL);
-            var response = await JsonSerializer.DeserializeAsync<IEnumerable<User>>(await streamTask);
+            var json = await client.GetStringAsync(URL);
 
-            return response;
+            var result = JsonConvert.DeserializeObject<IEnumerable<User>>(json);
+            return result;
         }
     }
 }
