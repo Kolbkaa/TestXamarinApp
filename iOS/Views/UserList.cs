@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Core.ViewModel;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Platforms.Ios.Binding.Views;
 using MvvmCross.Platforms.Ios.Views;
 using UIKit;
 
@@ -14,10 +17,16 @@ namespace iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var set = CreateBindingSet();
+            var source = new MvxSimpleTableViewSource(UserListTabView, "UserList", UserViewCell.Key);
+            UserListTabView.RowHeight = 130;
 
-            set.Bind(UserListTabView).To(vm => vm.UserList);
-            // Perform any additional setup after loading the view, typically from a nib.
+            UserListTabView.Source = source;
+      
+            var set = this.CreateBindingSet<UserList, UserListViewModel>();
+            set.Bind(source).To(vm => vm.UserList);
+            set.Apply();
+
+            UserListTabView.ReloadData();
         }
 
         public override void DidReceiveMemoryWarning()

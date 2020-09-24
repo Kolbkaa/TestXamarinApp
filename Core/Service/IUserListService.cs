@@ -6,6 +6,6 @@ namespace Core.Service
 {
     public interface IUserListService
     {
-        Task<IEnumerable<User>> GetUserListFromApi();
+        IEnumerable<User> GetUserListFromApi();
     }
 }

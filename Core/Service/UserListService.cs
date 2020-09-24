@@ -14,17 +14,18 @@ namespace Core.Service
     public class UserListService : IUserListService
     {
         private const string URL = "https://jsonplaceholder.typicode.com/users";
-        public async Task<IEnumerable<User>> GetUserListFromApi()
+        public  IEnumerable<User> GetUserListFromApi()
         {
             using var client = new HttpClient();
 
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var json = await client.GetStringAsync(URL);
+            var json = client.GetStringAsync(URL).Result;
 
             var result = JsonConvert.DeserializeObject<IEnumerable<User>>(json);
             return result;
+
         }
     }
 }

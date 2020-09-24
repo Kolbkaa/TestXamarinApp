@@ -48,7 +48,7 @@ namespace Core.ViewModel
         {
             await base.Initialize();
 
-            UserList = new MvxObservableCollection<User>( await _userListService.GetUserListFromApi());
+            UserList = new MvxObservableCollection<User>(_userListService.GetUserListFromApi());
 
         }
     }

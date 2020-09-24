@@ -1,4 +1,4 @@
-// WARNING
+﻿// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -10,14 +10,19 @@ using System.CodeDom.Compiler;
 
 namespace iOS.Views
 {
-    [Register ("UserList")]
-    partial class UserList
+    [Register ("UserViewCell")]
+    partial class UserViewCell
     {
         [Outlet]
-        UIKit.UITableView UserListTabView { get; set; }
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel UserName { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (UserName != null) {
+                UserName.Dispose ();
+                UserName = null;
+            }
         }
     }
 }
