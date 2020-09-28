@@ -20,13 +20,22 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="457" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="457" translatesAutoresizingMaskIntoConstraints="NO">
                         <rect key="frame" x="8" y="12" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <constraints>
+                            <constraint id="612" firstAttribute="height" constant="21"/>
+                            <constraint id="614" firstAttribute="width" constant="304"/>
+                        </constraints>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint id="611" firstItem="457" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="613" firstItem="457" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="760" firstItem="457" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="12"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="UserName" destination="457" id="name-outlet-457"/>
